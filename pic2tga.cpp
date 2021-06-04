@@ -1,9 +1,9 @@
-
-
+#include <iostream>
+#include <vector>
 #include <cstdint>
 #include <boost/program_options.hpp>
 #include <fstream>
-#include <SOIL/SOIL.h>
+#include "SOIL.h"
 
 typedef uint32_t INT;
 typedef uint16_t SHORT;
