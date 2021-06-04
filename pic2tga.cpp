@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cstdint>
-#include <boost/program_options.hpp>
+//#include <boost/program_options.hpp>
 #include <fstream>
 #include "SOIL.h"
 
@@ -25,6 +25,7 @@ typedef struct PICHeader {
 } PICHeader;
 
 int main(int argc, char* argv[]) {
+    /*
     namespace po = boost::program_options;
     
     po::options_description desc("Allowed options");
@@ -43,6 +44,14 @@ int main(int argc, char* argv[]) {
     }
     
     std::string input = vm["input"].as<std::string>();
+    */
+    if(argc == 1)
+    {
+	std::cout << "Usage: pic2tga FILE.PIC" << std::endl;
+	return 1;
+    }
+
+    std::string input = argv[1];
     std::string output = input + ".tga";
     
     std::ifstream file(input.c_str(), std::ios::binary);
