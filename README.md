@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This repo contains a set of tools I've developed to rip and convert resources from the abandonware game Ignition.
+This repo contains a program @Kazade developed to rip and convert PIC-images from the abandonware game Ignition.
 
 ## pic2tga
 
@@ -10,6 +10,6 @@ Ignition stores many images in a custom format with a .PIC extension, this littl
 
 ### Build
 
-The tool depends on boost_program_options and the SOIL image library. You can build the app by running the following command:
+I did some nasty hacks to get this working again after 11 years. You can build the app by running the following command:
 
-g++ -Wall -std=c++0x pic2tga.cpp -o pic2tga -lboost_program_options -lSOIL
+g++ pic2tga.cpp *.c -lglfw -lGLU -lGL -o pic2tga
